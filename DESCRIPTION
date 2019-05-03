@@ -1,21 +1,21 @@
 Package: gunit
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Converts Conductance Units
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: For plant physiologists, converts conductance (e.g. stomatal conductance) to different units: m/s, mol/m^2/s, and umol/m^2/s/Pa.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Depends: 
-    units
 Suggests: 
     testthat
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
-    magrittr
+    magrittr (>= 1.5.0),
+    stringr (>= 1.4.0),
+    units (>= 0.6.0),
+    tibble (>= 2.1.1)
 URL: https://github.com/cdmuir/gunit
 BugReports: https://github.com/cdmuir/gunit/issues
