@@ -16,14 +16,21 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/package=gunit)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Build Status](https://travis-ci.com/cdmuir/gunit.svg?token=yprDUtRtPBa2Ma9G4sFP&branch=master)](https://travis-ci.com/cdmuir/gunit)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
-The goal of gunit is to ...
+In plant physiology, conductance to heat, carbon dioxide, and water vapour are expressed in different units for different purposes. For heat exchange, units of m/s are most often used, whereas for gas exchange units of either mol/m^2/s (the default output from LICOR devices) or umol/m^2/s/Pa are used. I found it difficult to keep all the conversions straight, so I made a small package to help ensure proper conversion.
 
 ## Installation
 
-You can install the released version of gunit from [CRAN](https://CRAN.R-project.org) with:
+You can install the current version of gunit from [GitHub](https://github.com/cdmuir/gunit) with:
+
+``` r
+remotes::install.packages("cdmuir/gunit")
+```
+
+Or the released version of gunit from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("gunit")
@@ -31,27 +38,45 @@ install.packages("gunit")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to solve convert conductance units:
 
 ```{r example}
 library(gunit)
-## basic example code
+library(units)
+
+g_sw <- set_units(0.4, mol/m^2/s)
+convert_conductance(g_sw)
+
+# Change Temperature and Pressure
+g_sw <- set_units(0.4, mol/m^2/s)
+convert_conductance(g_sw, 
+                    P = set_units(80, kPa), 
+                    Temp = set_units(293, K))
+
+# Calculations can also be vectorized
+
+g_sw <- set_units(seq(0.1, 0.4, 0.1), mol/m^2/s)
+convert_conductance(g_sw)
+
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Contributors
 
-```{r cars}
-summary(cars)
-```
+* [Chris Muir](https://github.com/cdmuir)
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+## Comments and contributions
 
-You can also embed plots, for example:
+I welcome comments, criticisms, and especially contributions!
+GitHub issues are the preferred way to report bugs, ask questions, or request new features.
+You can submit issues here:
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+https://github.com/cdmuir/gunit/issues
 
-Please note that the 'gunit' project is released with a
+## Meta
+
+* Please [report any issues or bugs](https://github.com/cdmuir/gunit/issues).
+* License: MIT
+* Get citation information for `gunit` in R doing `citation(package = 'gunit')`
+* Please note that the 'gunit' project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
