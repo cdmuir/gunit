@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/package=gunit)
 [![Build
-Status](https://travis-ci.com/cdmuir/gunit.svg?token=yprDUtRtPBa2Ma9G4sFP&branch=master)](https://travis-ci.com/cdmuir/gunit)
+Status](https://travis-ci.org/cdmuir/gunit.svg?branch=master)](https://travis-ci.org/cdmuir/gunit)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
