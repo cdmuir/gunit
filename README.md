@@ -26,7 +26,7 @@ You can install the current version of gunit from
 [GitHub](https://github.com/cdmuir/gunit) with:
 
 ``` r
-remotes::install.packages("cdmuir/gunit")
+remotes::install_github("cdmuir/gunit")
 ```
 
 Or the released version of gunit from [CRAN](https://CRAN.R-project.org)
