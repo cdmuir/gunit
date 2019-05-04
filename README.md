@@ -11,6 +11,7 @@ status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/
 Status](https://travis-ci.org/cdmuir/gunit.svg?branch=master)](https://travis-ci.org/cdmuir/gunit)
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![](https://cranlogs.r-pkg.org/badges/gunit)](https://cran.r-project.org/package=gunit)
 <!-- badges: end -->
 
 In plant physiology, conductance to heat, carbon dioxide, and water
