@@ -39,8 +39,7 @@ install.packages("gunit")
 
 ## Example
 
-This is a basic example which shows you how to solve convert conductance
-units:
+This is a basic example which shows how to convert conductance units:
 
 ``` r
 library(gunit)
