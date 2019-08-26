@@ -1,5 +1,7 @@
 # gunit (development version)
 
+Fixed magrittr version in imports [Issue #2](https://github.com/cdmuir/gunit/issues/2#issue-484901487)
+
 # gunit 1.0.1
 
 Release to be archived with revision of "Is amphistomy an adaptation to high light? Optimality models of stomatal traits along light gradients."
