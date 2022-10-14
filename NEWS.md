@@ -1,5 +1,9 @@
 # gunit (development version)
 
+# gunit 1.0.2
+
+* Migrated `gc2gw()` and `gw2gc()` from **photosynthesis** to **gunit**.
+
 # gunit 1.0.1
 
 Release to be archived with revision of "Is amphistomy an adaptation to high light? Optimality models of stomatal traits along light gradients."

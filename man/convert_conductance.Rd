@@ -4,8 +4,12 @@
 \alias{convert_conductance}
 \title{Convert conductance units}
 \usage{
-convert_conductance(.g, P = set_units(101.3246, kPa),
-  R = set_units(8.31446, J/K/mol), Temp = set_units(298.15, K))
+convert_conductance(
+  .g,
+  P = set_units(101.3246, kPa),
+  R = set_units(8.31446, J/K/mol),
+  Temp = set_units(298.15, K)
+)
 }
 \arguments{
 \item{.g}{Conductance in class units. Units must convertible to one of "m/s", "umol/m^2/s/Pa", or "mol/m^2/s"}

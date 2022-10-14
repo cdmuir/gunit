@@ -16,8 +16,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/package=gunit)
-[![Build Status](https://travis-ci.org/cdmuir/gunit.svg?branch=master)](https://travis-ci.org/cdmuir/gunit)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![R-CMD-check](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 In plant physiology, conductance to heat, carbon dioxide, and water vapour are expressed in different units for different purposes. For heat exchange, units of m/s are most often used, whereas for gas exchange units of either mol/m^2/s (the default output from LICOR devices) or umol/m^2/s/Pa are used. I found it difficult to keep all the conversions straight, so I made a small package to help ensure proper conversion.
@@ -44,18 +44,18 @@ This is a basic example which shows you how to solve convert conductance units:
 library(gunit)
 library(units)
 
-g_sw <- set_units(0.4, mol/m^2/s)
+g_sw = set_units(0.4, mol/m^2/s)
 convert_conductance(g_sw)
 
 # Change Temperature and Pressure
-g_sw <- set_units(0.4, mol/m^2/s)
+g_sw = set_units(0.4, mol/m^2/s)
 convert_conductance(g_sw, 
                     P = set_units(80, kPa), 
                     Temp = set_units(293, K))
 
 # Calculations can also be vectorized
 
-g_sw <- set_units(seq(0.1, 0.4, 0.1), mol/m^2/s)
+g_sw = set_units(seq(0.1, 0.4, 0.1), mol/m^2/s)
 convert_conductance(g_sw)
 
 ```
