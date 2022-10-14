@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">gunit</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.2</span>
       </span>
     </div>
 
@@ -88,36 +88,36 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cdmuir/gunit" class="external-link">gunit</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/r-quantities/units/" class="external-link">units</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; udunits system database from /Library/Frameworks/R.framework/Versions/3.6/Resources/library/units/share/udunits</span></span>
+<span><span class="co">#&gt; udunits database from /usr/local/share/udunits/udunits2.xml</span></span>
 <span></span>
-<span><span class="va">g_sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
+<span><span class="va">g_sw</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/convert_conductance.html">convert_conductance</a></span><span class="op">(</span><span class="va">g_sw</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 1 x 3</span></span>
-<span><span class="co">#&gt;         `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
-<span><span class="co">#&gt;         [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
-<span><span class="co">#&gt; 1 0.009786197        3.947709         0.4</span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 3</span></span>
+<span><span class="co">#&gt;     `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
+<span><span class="co">#&gt;     [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
+<span><span class="co">#&gt; 1 0.00979            3.95         0.4</span></span>
 <span></span>
 <span><span class="co"># Change Temperature and Pressure</span></span>
-<span><span class="va">g_sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
+<span><span class="va">g_sw</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">0.4</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/convert_conductance.html">convert_conductance</a></span><span class="op">(</span><span class="va">g_sw</span>, </span>
 <span>                    P <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">80</span>, <span class="va">kPa</span><span class="op">)</span>, </span>
 <span>                    Temp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fl">293</span>, <span class="va">K</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 1 x 3</span></span>
-<span><span class="co">#&gt;        `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
-<span><span class="co">#&gt;        [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
-<span><span class="co">#&gt; 1 0.01218068               5         0.4</span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 3</span></span>
+<span><span class="co">#&gt;    `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
+<span><span class="co">#&gt;    [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
+<span><span class="co">#&gt; 1 0.0122               5         0.4</span></span>
 <span></span>
 <span><span class="co"># Calculations can also be vectorized</span></span>
 <span></span>
-<span><span class="va">g_sw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="fl">0.1</span><span class="op">)</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
+<span><span class="va">g_sw</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/units/man/units.html" class="external-link">set_units</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="fl">0.1</span><span class="op">)</span>, <span class="va">mol</span><span class="op">/</span><span class="va">m</span><span class="op">^</span><span class="fl">2</span><span class="op">/</span><span class="va">s</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/convert_conductance.html">convert_conductance</a></span><span class="op">(</span><span class="va">g_sw</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 4 x 3</span></span>
-<span><span class="co">#&gt;         `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
-<span><span class="co">#&gt;         [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
-<span><span class="co">#&gt; 1 0.002446549       0.9869272         0.1</span></span>
-<span><span class="co">#&gt; 2 0.004893099       1.9738543         0.2</span></span>
-<span><span class="co">#&gt; 3 0.007339648       2.9607815         0.3</span></span>
-<span><span class="co">#&gt; 4 0.009786197       3.9477087         0.4</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 4 × 3</span></span>
+<span><span class="co">#&gt;     `m/s` `umol/m^2/s/Pa` `mol/m^2/s`</span></span>
+<span><span class="co">#&gt;     [m/s] [umol/m^2/Pa/s] [mol/m^2/s]</span></span>
+<span><span class="co">#&gt; 1 0.00245           0.987         0.1</span></span>
+<span><span class="co">#&gt; 2 0.00489           1.97          0.2</span></span>
+<span><span class="co">#&gt; 3 0.00734           2.96          0.3</span></span>
+<span><span class="co">#&gt; 4 0.00979           3.95          0.4</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="contributors">Contributors<a class="anchor" aria-label="anchor" href="#contributors"></a>
@@ -138,7 +138,7 @@
 <ul>
 <li>Please <a href="https://github.com/cdmuir/gunit/issues" class="external-link">report any issues or bugs</a>.</li>
 <li>License: MIT</li>
-<li>Get citation information for <code>gunit</code> in R doing <code>citation(package =     'gunit')</code>
+<li>Get citation information for <code>gunit</code> in R doing <code>citation(package = 'gunit')</code>
 </li>
 <li>Please note that the ‘gunit’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</li>
 </ul>
@@ -189,8 +189,9 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://cran.r-project.org/package=gunit" class="external-link"><img src="https://www.r-pkg.org/badges/version/gunit" alt="CRAN status"></a></li>
-<li><a href="https://travis-ci.org/cdmuir/gunit" class="external-link"><img src="https://travis-ci.org/cdmuir/gunit.svg?branch=master" alt="Build Status"></a></li>
 <li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
+<li><a href="https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://cran.r-project.org/package=gunit" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/gunit"></a></li>
 </ul>
 </div>
 

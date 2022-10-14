@@ -13,15 +13,17 @@ gc2gw(g_c, D_c, D_w, unitless, a)
 \item{g_w}{conductance to water vapor in units
 (\eqn{\mu}mol H2O / (m^2 s Pa)) of class \code{units}.}
 
-\item{D_c}{diffusion coefficient for CO2 in air in units of m^2/s of call
+\item{D_c}{diffusion coefficient for CO2 in air in units of m^2/s of class
 \code{units}}
 
-\item{D_w}{diffusion coefficient for H2O in air in units of m^2/s of call
+\item{D_w}{diffusion coefficient for H2O in air in units of m^2/s of class
 \code{units}}
 
-\item{a}{exponent used for conversion. Use 1 for still air; 0.67 for laminar flow (Jones 2014).
+\item{unitless}{Logical. Should scientific units of arguments be checked and set? TRUE is safer, but slower. If FALSE, values provided are assumed to be in correct units.
 
 \code{units}}
+
+\item{a}{exponent used for conversion. Use 1 for still air; 0.67 for laminar flow (Jones 2014). Should be unitless.}
 
 \item{g_c}{conductance to CO2 in units (\eqn{\mu}mol H2O / (m^2 s Pa)) of
 class \code{units}.}
@@ -45,13 +47,15 @@ higher molecular weight. To convert:
 This function will soon be moving to the standalone gunit package.
 }
 \examples{
+library(units)
 D_c = set_units(1.29e-05, "m^2/s")
 D_w = set_units(2.12e-05, "m^2/s")
 g_c = set_units(3, "umol/m^2/s/Pa")
-g_w = gc2gw(g_c, D_c, D_w, unitless = FALSE)
+a = 1
+g_w = gc2gw(g_c, D_c, D_w, a, unitless = FALSE)
 g_w
 
-gw2gc(g_w, D_c, D_w, unitless = FALSE)
+gw2gc(g_w, D_c, D_w, a, unitless = FALSE)
 }
 \references{
 Jones H. 2014. Plants and Microclimate (3rd edition). Cambridge University Press.
