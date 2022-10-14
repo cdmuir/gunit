@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/package=gunit)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-check](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml)
+[![](https://cranlogs.r-pkg.org/badges/gunit)](https://cran.r-project.org/package=gunit)
 <!-- badges: end -->
 
 In plant physiology, conductance to heat, carbon dioxide, and water vapour are expressed in different units for different purposes. For heat exchange, units of m/s are most often used, whereas for gas exchange units of either mol/m^2/s (the default output from LICOR devices) or umol/m^2/s/Pa are used. I found it difficult to keep all the conversions straight, so I made a small package to help ensure proper conversion.

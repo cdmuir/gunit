@@ -10,6 +10,7 @@ status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-check](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml)
+[![](https://cranlogs.r-pkg.org/badges/gunit)](https://cran.r-project.org/package=gunit)
 <!-- badges: end -->
 
 In plant physiology, conductance to heat, carbon dioxide, and water
