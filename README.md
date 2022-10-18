@@ -7,8 +7,6 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/gunit)](https://cran.r-project.org/package=gunit)
-[![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-check](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cdmuir/gunit/actions/workflows/R-CMD-check.yaml)
 [![](https://cranlogs.r-pkg.org/badges/gunit)](https://cran.r-project.org/package=gunit)
 <!-- badges: end -->
@@ -44,7 +42,6 @@ units:
 ``` r
 library(gunit)
 library(units)
-#> udunits database from /usr/local/share/udunits/udunits2.xml
 
 g_sw = set_units(0.4, mol/m^2/s)
 convert_conductance(g_sw)
@@ -78,7 +75,7 @@ convert_conductance(g_sw)
 
 ## Contributors
 
--   [Chris Muir](https://github.com/cdmuir)
+- [Chris Muir](https://github.com/cdmuir)
 
 ## Comments and contributions
 
@@ -90,11 +87,11 @@ new features. You can submit issues here:
 
 ## Meta
 
--   Please [report any issues or
-    bugs](https://github.com/cdmuir/gunit/issues).
--   License: MIT
--   Get citation information for `gunit` in R doing
-    `citation(package = 'gunit')`
--   Please note that the ‘gunit’ project is released with a Contributor
-    Code of Conduct. By contributing to this project, you agree to abide
-    by its terms.
+- Please [report any issues or
+  bugs](https://github.com/cdmuir/gunit/issues).
+- License: MIT
+- Get citation information for `gunit` in R doing
+  `citation(package = 'gunit')`
+- Please note that the ‘gunit’ project is released with a Contributor
+  Code of Conduct. By contributing to this project, you agree to abide
+  by its terms.
