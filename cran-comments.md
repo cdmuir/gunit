@@ -1,5 +1,8 @@
 ## Test environments
 * local OS X install, R 4.2.1
+* win-builder (release) [in progress]
+* win-builder (devel) [not subimitted yet]
+* win-builder (oldrelease) [not submitted yet]
 
 ## R CMD check results
 
